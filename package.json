@@ -1,0 +1,26 @@
+{
+  "name": "sfid",
+  "version": "1.0.0",
+  "description": "Work with Salesforce IDs, convert to/from long or short ids, guess type, and more.",
+  "bin": {
+    "sfid": "./cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walling/sfid.git"
+  },
+  "keywords": [
+    "salesforce",
+    "id",
+    "sobject"
+  ],
+  "author": "Bjarke Walling <bwp@bwp.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walling/sfid/issues"
+  },
+  "homepage": "https://github.com/walling/sfid#readme"
+}
