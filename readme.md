@@ -1,6 +1,24 @@
-# Salesforce Id
+> Node module to work with Salesforce Id
 
 This module enables you to easily work with Salesforce Ids. You can convert from short to long version of the Id, guess object type, and more. Check out the documentation below.
+
+### Content
+
+
+- [Getting started](#getting-started)
+- [Command line usage](#command-line-usage)
+- [Normalizing Ids](#normalizing-ids)
+- [Guessing type](#guessing-type)
+- [Advanced example: Finding Ids in text](#advanced-example-finding-ids-in-text)
+- [API](#api)
+  - [.long(id : String) -> String](#longid--string---string)
+  - [.short(id : String) -> String](#shortid--string---string)
+  - [.isValid(id : String) -> Boolean](#isvalidid--string---boolean)
+  - [.guessType(id : String) -> String | Array<String>](#guesstypeid--string---string--array)
+  - [.registerPrefix(prefix : String, objectName : String) -> Void](#registerprefixprefix--string-objectname--string---void)
+  - [.checksum(id : String) -> String](#checksumid--string---string)
+  - [.regexp(completeMatch : Boolean) -> Regexp](#regexpcompletematch--boolean---regexp)
+- [License](#license)
 
 
 ### Getting started
@@ -102,7 +120,7 @@ First normalize using `sfid.long` function and then cut of the checksum. For inv
 
 Checks if a value is a valid Id.
 
-#### .guessType(id : String) -> String | Array<String>
+#### .guessType(id : String) -> String | Array\<String\>
 
 Guess object type based on the Id prefix. For invalid Ids, returns empty string `''`.
 
