@@ -89,8 +89,7 @@ function sfidIsValid(id) {
 
 function sfidGuessType(id) {
     id = sfidLongId(id);
-    if (id.substring(0, 2) === 'a0') { return 'custom'; }
-    return id ? (prefixes[id.substring(0, 3)] || 'unknown') : null;
+    return id ? (prefixes[id.substring(0, 3)] || (id.substring(0, 2) === 'a0' ? 'custom' : 'unknown')) : null;
 }
 
 function sfidRegisterPrefix(prefix, objectName) {

@@ -144,18 +144,19 @@ var ids = {
     '80120000000aaAaAAI' : 'Order',
     '80120000000aaaaAAA' : 'Order',
     '80120000001AAA1AAO' : 'Order',
-    'a012A00000A11aAQAR' : 'custom',
-    'a012A00000AAAA1QAP' : 'custom',
-    'a012A00000AAaAaQAL' : 'custom',
-    'a012000000A11aAAAR' : 'custom',
-    'a012000000AAAaAAAX' : 'custom',
-    'a01200000aAAAaAAAX' : 'custom',
-    'a012000000Aa1aaAAB' : 'custom',
-    'a012000000AaAA1AAN' : 'custom',
-    'a012000000AaAAAAA3' : 'custom',
-    'a012000000AaaAaAAJ' : 'custom'
+    'a012A00000A11aAQAR' : 'MyObject__c',
+    'a012A00000AAAA1QAP' : 'MyObject__c',
+    'a012A00000AAaAaQAL' : 'MyObject__c',
+    'a012000000A11aAAAR' : 'MyObject__c',
+    'a012000000AAAaAAAX' : 'MyObject__c',
+    'a01200000aAAAaAAAX' : 'MyObject__c',
+    'a012000000Aa1aaAAB' : 'MyObject__c',
+    'a012000000AaAA1AAN' : 'MyObject__c',
+    'a012000000AaAAAAA3' : 'MyObject__c',
+    'a012000000AaaAaAAJ' : 'MyObject__c'
 };
 
+sfid.registerPrefix('a01', 'MyObject__c');
 Object.keys(ids).forEach(function(id) {
     assert.equal(id, sfid(id));
     assert.equal(id, sfid(id.toUpperCase()));
