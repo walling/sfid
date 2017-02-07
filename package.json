@@ -1,6 +1,6 @@
 {
   "name": "sfid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Work with Salesforce IDs, convert to/from long or short ids, guess type, and more.",
   "bin": {
     "sfid": "./cli.js"
