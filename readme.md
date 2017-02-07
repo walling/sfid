@@ -1,5 +1,7 @@
 > Node module to work with Salesforce Id
 
+![sfid](https://api.travis-ci.org/walling/sfid.svg)
+
 This module enables you to easily work with Salesforce Ids. You can convert from short to long version of the Id, guess object type, and more. Example:
 
 ```js
