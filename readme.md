@@ -44,7 +44,7 @@ Salesforce Ids have two versions (15-character and 18-character). The long versi
 
 ```
 console.log(sfid('80120000000TESTAAA'));  // 80120000000testAAA
-console.log(sfid('80120000000TESTAAF'));  // 80120000000tEsTAAF
+console.log(sfid('80120000000TESTAAE'));  // 80120000000tEstAAE
 ```
 
 Remember if you cut of the checksum and work with 15-character version (short Id), the recovery of upper-case and lower-case characters is not possible.
