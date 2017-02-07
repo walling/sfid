@@ -88,33 +88,33 @@ while ((match = regexp.exec(text)) !== null) {
 
 ### API
 
-#### sfid.long(id : String) -> String
+#### .long(id : String) -> String
 
 Alias: `sfid(id)`
 
 Converts to long Id (18-character). For 15-character Ids, it appends the checksum. For 18-character Ids, it normalizes the upper-case and lower-case characters. For invalid Ids, returns empty string `''`.
 
-#### sfid.short(id : String) -> String
+#### .short(id : String) -> String
 
 First normalize using `sfid.long` function and then cut of the checksum. For invalid Ids, returns empty string `''`.
 
-#### sfid.isValid(id : String) -> Boolean
+#### .isValid(id : String) -> Boolean
 
 Checks if a value is a valid Id.
 
-#### sfid.guessType(id : String) -> String | Array<String>
+#### .guessType(id : String) -> String | Array<String>
 
 Guess object type based on the Id prefix. For invalid Ids, returns empty string `''`.
 
-#### sfid.registerPrefix(prefix : String, objectName : String) -> Void
+#### .registerPrefix(prefix : String, objectName : String) -> Void
 
 Adds a 3-character prefix to recognize using `sfid.guessType` function. Can be used for custom objects.
 
-#### sfid.checksum(id : String) -> String
+#### .checksum(id : String) -> String
 
 Calculates 3-character checksum to append for an Id. Works for both 15- and 18-character Ids. The function assumes input is at least 15 characters long.
 
-#### sfid.regexp(completeMatch : Boolean) -> Regexp
+#### .regexp(completeMatch : Boolean) -> Regexp
 
 Return regexp to use for searching for Ids in a text (default), or match completely (if `completeMatch` parameter is true).
 
