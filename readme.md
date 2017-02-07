@@ -16,8 +16,8 @@ Usage:
 ```js
 var sfid = require('sfid');
 
-console.log(sfid('80120000000test'));               // 80120000000testAAA
-console.log(sfid.short('80120000000testAAA'));      // 80120000000test
+console.log(sfid('80120000000test'));           // 80120000000testAAA
+console.log(sfid.short('80120000000testAAA'));  // 80120000000test
 ```
 
 
