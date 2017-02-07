@@ -1,11 +1,19 @@
 > Node module to work with Salesforce Id
 
-This module enables you to easily work with Salesforce Ids. You can convert from short to long version of the Id, guess object type, and more. Check out the documentation below.
+This module enables you to easily work with Salesforce Ids. You can convert from short to long version of the Id, guess object type, and more. Example:
+
+```js
+var sfid = require('sfid');
+
+console.log(sfid('80120000000test'));           // 80120000000testAAA
+console.log(sfid.short('80120000000testAAA'));  // 80120000000test
+```
+
 
 ### Content
 
 
-- [Getting started](#getting-started)
+- [Install](#install)
 - [Command line usage](#command-line-usage)
 - [Normalizing Ids](#normalizing-ids)
 - [Guessing type](#guessing-type)
@@ -21,21 +29,10 @@ This module enables you to easily work with Salesforce Ids. You can convert from
 - [License](#license)
 
 
-### Getting started
-
-Install:
+### Install
 
 ```bash
 npm install --save sfid
-```
-
-Usage:
-
-```js
-var sfid = require('sfid');
-
-console.log(sfid('80120000000test'));           // 80120000000testAAA
-console.log(sfid.short('80120000000testAAA'));  // 80120000000test
 ```
 
 
