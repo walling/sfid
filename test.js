@@ -1,7 +1,7 @@
 'use strict';
 
 var assert  = require('assert');
-var sfid    = require('.');
+var sfid    = require('./');
 
 assert.equal('80120000000testAAA' , sfid('80120000000testAAA'));
 assert.equal('80120000000testAAA' , sfid('80120000000test'));

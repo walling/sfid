@@ -3,7 +3,7 @@
 
 var util    = require('util');
 var path    = require('path');
-var sfid    = require('.');
+var sfid    = require('./');
 var args    = process.argv.slice(2);
 var options = { _ : [] };
 
