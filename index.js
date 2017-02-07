@@ -5,25 +5,25 @@ var prefixes = require('./prefixes');
 var checksumAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 function sfidChecksum(id) {
     var bin1 =
-        ((~id.charCodeAt(0) >> 5 & 1) << 4) |
-        ((~id.charCodeAt(1) >> 5 & 1) << 3) |
+        ((~id.charCodeAt(0) >> 5 & 1) << 0) |
+        ((~id.charCodeAt(1) >> 5 & 1) << 1) |
         ((~id.charCodeAt(2) >> 5 & 1) << 2) |
-        ((~id.charCodeAt(3) >> 5 & 1) << 1) |
-        ((~id.charCodeAt(4) >> 5 & 1) << 0);
+        ((~id.charCodeAt(3) >> 5 & 1) << 3) |
+        ((~id.charCodeAt(4) >> 5 & 1) << 4);
 
     var bin2 =
-        ((~id.charCodeAt(5) >> 5 & 1) << 4) |
-        ((~id.charCodeAt(6) >> 5 & 1) << 3) |
+        ((~id.charCodeAt(5) >> 5 & 1) << 0) |
+        ((~id.charCodeAt(6) >> 5 & 1) << 1) |
         ((~id.charCodeAt(7) >> 5 & 1) << 2) |
-        ((~id.charCodeAt(8) >> 5 & 1) << 1) |
-        ((~id.charCodeAt(9) >> 5 & 1) << 0);
+        ((~id.charCodeAt(8) >> 5 & 1) << 3) |
+        ((~id.charCodeAt(9) >> 5 & 1) << 4);
 
     var bin3 =
-        ((~id.charCodeAt(10) >> 5 & 1) << 4) |
-        ((~id.charCodeAt(11) >> 5 & 1) << 3) |
+        ((~id.charCodeAt(10) >> 5 & 1) << 0) |
+        ((~id.charCodeAt(11) >> 5 & 1) << 1) |
         ((~id.charCodeAt(12) >> 5 & 1) << 2) |
-        ((~id.charCodeAt(13) >> 5 & 1) << 1) |
-        ((~id.charCodeAt(14) >> 5 & 1) << 0);
+        ((~id.charCodeAt(13) >> 5 & 1) << 3) |
+        ((~id.charCodeAt(14) >> 5 & 1) << 4);
 
     return checksumAlphabet[bin1] + checksumAlphabet[bin2] + checksumAlphabet[bin3];
 }
@@ -64,7 +64,7 @@ function sfidLongId(id) {
 
     for (var i = 0; i < 3; i++) {
         var bin = bins[i];
-        for (var position = i * 5 + 4; bin; position--, bin >>= 1) {
+        for (var position = i * 5; bin; position++, bin >>= 1) {
             if (bin & 1) {
                 // Invalid character (not A-Z)
                 if (id.charCodeAt(position) < 97) { return ''; }
