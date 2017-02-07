@@ -14,7 +14,7 @@ This module enables you to easily work with Salesforce Ids. You can convert from
   - [.long(id : String) -> String](#longid--string---string)
   - [.short(id : String) -> String](#shortid--string---string)
   - [.isValid(id : String) -> Boolean](#isvalidid--string---boolean)
-  - [.guessType(id : String) -> String | Array<String>](#guesstypeid--string---string--array)
+  - [.guessType(id : String) -> String | Array<String>](#guesstypeid--string---string--arraystring)
   - [.registerPrefix(prefix : String, objectName : String) -> Void](#registerprefixprefix--string-objectname--string---void)
   - [.checksum(id : String) -> String](#checksumid--string---string)
   - [.regexp(completeMatch : Boolean) -> Regexp](#regexpcompletematch--boolean---regexp)
